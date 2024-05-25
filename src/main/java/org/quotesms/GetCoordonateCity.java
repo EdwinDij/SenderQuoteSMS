@@ -17,7 +17,7 @@ public class GetCoordonateCity {
             this.longitude = longitude;
         }
 
-        public String getLattitude(){
+        public String getLatitude(){
             return latitude;
         }
 

@@ -41,7 +41,7 @@ public class QuoteGenerator {
     
     //réponse de l'api
     int resStatusCode = connection.getResponseCode();
-    // System.out.println("Res code: " + resStatusCode);
+    System.out.println("Res code: " + resStatusCode);
 
     //lire la réponse
     BufferedReader input = new BufferedReader(new InputStreamReader(connection.getInputStream()));
