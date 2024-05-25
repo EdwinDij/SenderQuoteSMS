@@ -4,12 +4,10 @@ import org.json.JSONObject;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.io.IOException;
-import java.net.URLEncoder;
 import java.net.URL;
 import java.util.Scanner;
 import io.github.cdimascio.dotenv.Dotenv;
 import org.json.JSONArray;
-import org.json.JSONObject;
 
 public class CurrentWeather {
     
