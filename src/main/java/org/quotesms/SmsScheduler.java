@@ -1,6 +1,6 @@
 package org.quotesms;
 
-public class App {
+public class SmsScheduler  {
     public static void main(String[] args) {
         try {
             QuoteGenerator.getQuote();
