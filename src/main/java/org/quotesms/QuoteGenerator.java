@@ -9,9 +9,27 @@ import org.json.XML;
 
 
 public class QuoteGenerator {
-    public static void getQuote(){ 
-        String quoteText;
-        String quoteAuthor;
+    public static class Quote {
+        private String quoteText;
+        private String quoteAuthor;
+
+        public Quote(String quoteText, String quoteAuthor) {
+            this.quoteText = quoteText;
+            this.quoteAuthor = quoteAuthor;
+        }
+
+        public String getQuoteText() {
+            return quoteText;
+        }
+
+        public String getQuoteAuthor() {
+            return quoteAuthor;
+        }
+    }
+
+    public static Quote getQuote(){
+    String quoteText = "";
+    String quoteAuthor = "";
     try {
     String url = "http://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=xml&lang=en";
     URL obj = new URL(url);
@@ -43,11 +61,9 @@ public class QuoteGenerator {
     quoteText = quote.getString("quoteText");
     quoteAuthor = quote.getString("quoteAuthor");
 
-    System.out.println("text " + quoteText);
-    System.out.println("author " + quoteAuthor);
-
     } catch(Exception e) {
     e.printStackTrace();
     }
+    return new Quote(quoteText, quoteAuthor);
 }
 }
