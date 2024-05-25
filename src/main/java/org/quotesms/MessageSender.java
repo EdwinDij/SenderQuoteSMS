@@ -23,7 +23,7 @@ public class MessageSender {
                 Message message = Message.creator(
                         new PhoneNumber(twilioConfig.getMyPhone()),
                         new PhoneNumber(twilioConfig.getTwilioPhone()),
-                        String.format("Hey 👋, il fait %s°C et le ciel est %s.\n Phrase inspirante du jour: %s ---%s",weather.getDegree(), weather.getDescription(), QuoteGenerator.getQuote().getQuoteText(), QuoteGenerator.getQuote().getQuoteAuthor())
+                        String.format("Hey 👋, il fait %s°C et le ciel est %s.\nPhrase inspirante du jour: %s ---%s",weather.getDegree(), weather.getDescription(), QuoteGenerator.getQuote().getQuoteText(), QuoteGenerator.getQuote().getQuoteAuthor())
                 ).create();
         
                 System.out.println("Message SID: " + message.getSid());

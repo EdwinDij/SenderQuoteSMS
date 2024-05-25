@@ -50,7 +50,7 @@ public class CurrentWeather {
             int responseCode = conn.getResponseCode();
             if (responseCode == 200) {
                 InputStream inputStream = conn.getInputStream();
-                Scanner scanner = new Scanner(inputStream);
+                Scanner scanner = new Scanner(inputStream, "UTF-8");
                 StringBuilder json = new StringBuilder();
     
                 while (scanner.hasNextLine()) {
