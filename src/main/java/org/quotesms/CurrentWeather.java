@@ -41,7 +41,7 @@ public class CurrentWeather {
     
             String apiUrl = String.format("https://api.openweathermap.org/data/3.0/onecall?lat=%s&lon=%s&appid=%s&units=metric&lang=fr",
                                            lat, lon, apiKey);
-            System.out.println("Constructed URL: " + apiUrl); // Debugging output
+            // System.out.println("Constructed URL: " + apiUrl); debugg
     
             URL url = new URL(apiUrl);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();

@@ -26,7 +26,7 @@ public class MessageSender {
                         String.format("Hey 👋, il fait %s°C et le ciel est %s.\nPhrase inspirante du jour: %s ---%s",weather.getDegree(), weather.getDescription(), QuoteGenerator.getQuote().getQuoteText(), QuoteGenerator.getQuote().getQuoteAuthor())
                 ).create();
         
-                System.out.println("Message SID: " + message.getSid());
+                // System.out.println("Message SID: " + message.getSid());
             } catch (Exception e) {
                 e.printStackTrace();
             }
