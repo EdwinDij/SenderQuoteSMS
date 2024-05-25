@@ -6,7 +6,7 @@ import java.net.HttpURLConnection;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Scanner;
-import io.github.cdimascio.dotenv.Dotenv;
+// import io.github.cdimascio.dotenv.Dotenv;
 import org.json.JSONArray;
 
 public class CurrentWeather {
@@ -29,8 +29,8 @@ public class CurrentWeather {
         }
     }
     public static Weather getWeather(String lat, String lon) {
-        Dotenv dotenv = Dotenv.load();
-        String apiKey = dotenv.get("API_KEY").trim();
+        // Dotenv dotenv = Dotenv.load();
+        String apiKey = System.getenv("API_KEY").trim();
     
         Weather weather = null;
     

@@ -3,15 +3,15 @@ package org.quotesms;
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
-import io.github.cdimascio.dotenv.Dotenv;
+// import io.github.cdimascio.dotenv.Dotenv;
 
 public class MessageSender {
-    private static Dotenv dotenv = Dotenv.load();
+    // private static Dotenv dotenv = Dotenv.load();
     private static TwilioConfig twilioConfig = new TwilioConfig(
-        dotenv.get("ACCOUNT_SID"),
-        dotenv.get("ACCOUND_SID_AUTH_TOKEN"),
-        dotenv.get("TWILIO_PHONE"),
-        dotenv.get("MYPHONE")
+        System.getenv("ACCOUNT_SID"),
+        System.getenv("ACCOUND_SID_AUTH_TOKEN"),
+        System.getenv("TWILIO_PHONE"),
+        System.getenv("MYPHONE")
     );
 
     public static void sender() throws Exception {

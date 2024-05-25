@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.net.URLEncoder;
 import java.net.URL;
 import java.util.Scanner;
-import io.github.cdimascio.dotenv.Dotenv;
+// import io.github.cdimascio.dotenv.Dotenv;
 
 public class GetCoordonateCity {
     
@@ -26,8 +26,8 @@ public class GetCoordonateCity {
         }
     }
     public static Coordonate getCoordonate(){
-        Dotenv dotenv = Dotenv.load();
-        String city = dotenv.get("CITY");
+        // Dotenv dotenv = Dotenv.load();
+        String city = System.getenv("CITY");
         // System.out.println(city);
 
         Coordonate coordonate = null;
